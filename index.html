@@ -1,276 +1,262 @@
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
-
-    {
-    box-sizing: border-box;
-  }
-
   body {
-    font-family: "Roboto", sans-serif;
+    background-color: #dedede;
     margin: 0;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  hr {
-    background-color: #c4c4c4;
-    height: 1px;
-    border: 0;
-  }
-
-  .container {
-    margin: 0 auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: 100%;
-  }
-
-  .text-center {
+    padding: 0;
     text-align: center;
   }
 
-  .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 1rem 0 0.5rem;
-  }
-
-  .logo i {
-    font-size: 3rem;
-    margin-right: 1rem;
-  }
-
-  time {
-    font-weight: bold;
-  }
-
-  nav {
-    border-top: 2px solid #c4c4c4;
-    border-bottom: 2px solid #c4c4c4;
-    margin: 1rem 0;
-  }
-
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 0;
-    list-style-type: none;
-  }
-
-  nav a {
+  h3 {
     color: black;
-    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    margin: 0px;
+
   }
 
-  nav2 {
-    margin: 1rem 0;
+  .list {
+    background-color: #dedede;
+    border-radius: 15px;
+    width: min(70%, 900px);
+    height: auto;
+    display: block;
+    margin: 0px auto;
+    padding: 8px 70px 30px 50px;
   }
 
-  nav2 ul {
-    list-style-type: none;
-  }
-
-  nav2 a {
+  ul {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
     color: black;
-    text-decoration: none;
+    font-weight: 300;
+    margin-bottom: 0;
+    line-height: 1.6em;
   }
 
-  .row {
-    display: flex;
+  strong {
+    font-weight: 900;
   }
 
-  .col {
-    padding: 1.5rem;
-    flex: 1;
+
+  p {
+    color: black;
+    font-family: 'Roboto', sans-serif;
   }
 
-  .col:not(:last-child) {
-    border-right: 2px solid #c4c4c4;
+  .list p {
+    font-style: italic;
+    margin: 24px 0;
+    font-size: 1.2em;
+    font-weight: 400;
   }
 
-  main p {
-    line-height: 1.5rem;
-    letter-spacing: 1px;
+  a {
+    color: black;
   }
 
-  main h3 {
-    margin-top: 0;
-  }
+  /* formatting for mobile */
 
-  .left {
-    float: left;
-  }
+  @media screen and (max-width: 479px) {
 
-  .right {
-    float: right;
-  }
+    h1 {
+      font-size: 42px;
+      margin-right: 10px;
+    }
 
-  .bottom-4 {
-    margin-bottom: 4cm;
-  }
+    h2 {
+      font-size: 22px;
+      margin-right: 10px;
+    }
 
-  .bottom-2 {
-    margin-bottom: 2cm;
-  }
+    .header-img {
+      height: 300px;
+    }
 
-  li2 {
-    list-style-type: none;
-    width: 60%;
-  }
+    .foreword {
+      width: 80%;
+    }
 
-  @media screen and (max-width: 468px) {
-    .row {
+    .list {
+      width: 100%;
+      border-radius: 0;
+      padding: 20px 0;
+      margin: 0;
+    }
+
+    ul {
+      padding: 10px 40px;
+    }
+
+    .list p {
+      font-size: 16px;
+    }
+
+    ul,
+    footer p {
+      font-size: 14px;
+    }
+
+    .gallery {
+      margin: 30px auto 0 auto;
+      width: 75%;
+      display: flex;
       flex-direction: column;
     }
 
-    .col:not(:last-child) {
-      border-right: none;
-      border-left: none;
+    .gallery img {
+      width: 100%;
+    }
+
+    .caption p {
+      font-size: 12px;
+    }
+
+    @media screen and (max-width: 321px) {
+
+      .foreword {
+        padding: 20px 0;
+        width: 75%;
+      }
+
+
+      .list p {
+        margin-top: 0px;
+        padding-top: 0px;
+      }
+
+      ul,
+      .list p,
+      footer p {
+        font-size: 14px;
+      }
+
+      .gallery {
+        margin: 30px auto 0 auto;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .gallery img {
+        width: 100%;
+      }
+
+      .caption p {
+        font-size: 12px;
+      }
+
+      .caption {
+        margin-bottom: 20px;
+      }
     }
   }
 </style>
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <title> Bio </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,900;1,300&display=swap"
+    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
-<body>
-  <br>
-  <br>
-  <!-- <p class="logo">Francesco Ranellucci</p> -->
+<body id="main">
+  <main>
+    <div class="list" id="tribute-info">
+      <br> <br>
+      <h3> Bio </h3><br> <br>
 
-  <div class="container">
-    <nav>
+
+      Computer engineering student, passionate about technology, computer science and electronics. He also likes sports
+      and outdoor activities. Francesco is Italian but he has lived in two different continents, Europe and North
+      America, more precisely in the United States. He can speak two languages, Italian and English.
+      <br> <br> <br>
       <ul>
-        <li><a href="https://frr0.github.io/"><strong>Home</strong></a></li>
-        <!-- <li><a href="https://raw.githubusercontent.com/frr0/cv-website/master/cv.pdf"><strong>Resume</strong></a>
-        </li>
-        <li><a href="https://github.com/frr0"><strong>Github</strong></a></li>
-        <li><a href="https://gitlab.com/fra07"><strong>Gitlab</strong></a></li>
-        <li><a href="mailto:f.ranellucci@outlook.com"><strong>Mail</strong></a></li>
-        <li><a href="https://t.me/joinchat/FbYr00z8Yf5hZjY0"><strong>Telegram</strong></a></li>
-        <li><a href="https://www.strava.com/athletes/45162421"><strong>Strava</strong></a></li> -->
+        <h3> Education </h3><br>
+        <li> Ongoing: <a href="https://www.polito.it/index.php?lang=en"><strong>Polythecnic
+              University
+              of Turin</strong></a></li>
+        Bachelor of Engineering in Computer Engineering, Turin, Italy <br><br>
+
+        <li> 2019: <a href="https://www.liceogalfer.it/"><strong>Liceo Scientifico Statale
+              Galileo Ferraris</strong> </a></li>
+        Scientific High School, Turin, Italy <br> <br>
+
+        <li> 2018: <a href="https://www.mcpsmt.org/bigsky"><strong>Big Sky High
+              School</strong></a> </li>
+        High School Exchange Program, Missoula, MT, US <br> <br>
       </ul>
-    </nav>
-  </div>
 
-  <div class="container">
-    <center>
-      <p style="line-height:1.4">
-        Computer engineering student, passionate about technology, computer science and electronics. He also likes
-        sports
-        and outdoor activities. Francesco is Italian but he has lived in two different continents, Europe and North
-        America,
-        more precisely in the United States. He can speak two languages, Italian and English.
-      </p>
-    </center>
-  </div>
-
-  <main class="container">
-    <h3>Education</h3>
-    <hr>
-    <nav2>
       <ul>
-        <!-- ============================================================================================================================ -->
-        <li2><span class="left"><a href="https://www.polito.it/index.php?lang=en"><strong>Polythecnic
-                University
-                of Turin</strong> - Ongoing</a></span><br>
+        <h3> Team Work Experience and Competitions </h3><br>
 
-          <li2><span class="left">Bachelor of Engineering in
-              Computer Engineering, Turin, Italy</span><br><br>
-            <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
-            <li2><span class="left"><a href="https://www.liceogalfer.it/"><strong>Liceo Scientifico Statale
-                    Galileo Ferraris</strong> - 2019</a></span></li2>
-            <br>
-
-            <li2><span class="left">Scientific High School, Turin, Italy</span><br><br>
-              <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
-              <li2><span class="left"><a href="https://www.mcpsmt.org/bigsky"><strong>Big Sky High
-                      School</strong> - 2018</a></span></li2><br>
-
-              <li2><span class="left">High School Exchange Program, Missoula, MT, US</span></li2><br><br>
-              <!-- ============================================================================================================================ -->
-      </ul>
-    </nav2>
-
-    <h3>Team work experience and competitions</h3>
-    <hr>
-    <nav2>
-      <ul>
-        <!-- ============================================================================================================================ -->
-        <li2><span class="left"><a
+        <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+        <li>2019, 2020: <span class="left"><a
               href="https://gitlab.com/fra07/Giornata_della_Scienza_2017-2018-2019/-/tree/main/EBEC"><strong>EBEC</strong>
-              - 2019, 2020</a></li2><br>
-
-        <li2>EBEC Competition, (2019 Team Design, 2020 Case Study)</li2><br><br>
+            </a></li>
+        EBEC Competition, (2019 Team Design, 2020 Case Study)<br><br>
         <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
-        <li2><span class="left"><a
+        <li>2020: <span class="left"><a
               href="https://gitlab.com/fra07/Giornata_della_Scienza_2017-2018-2019/-/tree/main/Investment_challenge"><strong>Investment
-                Challenge</strong> - 2020</a></span></li2><br>
-
-        <li2>Reply Investment Challenge, Investments with real stocks</li2><br><br>
+                Challenge</strong>
+            </a></li>Reply Investment Challenge, Investments with real stocks
+        <br><br>
         <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
-        <li2><span class="left"><a
+        <li>2017, 2018, 2019: <span class="left"><a
               href="https://gitlab.com/fra07/Giornata_della_Scienza_2017-2018-2019/-/tree/main/Giornata-della-scienza"><strong>Giornata
                 della
-                Scienza</strong> - 2017, 2018, 2019</a></span></li2><br>
-
-        <li2>Turin science fair, (2017 Physics Team work, 2018 Math Team work, 2019 Electronics Team work)</li2><br><br>
+                Scienza</strong>
+            </a></li>
+        Turin science fair, (2017 Physics Team work, 2018 Math Team work, 2019 Electronics Team work)<br><br>
         <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
-        <li2><span class="left"><a
+        <li>2018: <span class="left"><a
               href="https://gitlab.com/fra07/Giornata_della_Scienza_2017-2018-2019/-/tree/main/2018%20Clean%20air%20and%20healty%20homes%20symposium"><strong>Clean
                 air and healty homes
-                symposium</strong>2018</a></span></li2><br>
-
-        <li2>Big Sky High School, University of Montana, Montana Department of Environmental Quality</li2><br><br>
-        <!-- ============================================================================================================================ -->
+                symposium</strong>
+            </a></li>Big Sky High School, University of Montana, Montana Department of Environmental Quality
+        <br><br>
+        <!-- ---------------------------------------------------------------------------------------------------------------------------- -->
       </ul>
-    </nav2>
 
-    <h3>Skills</h3>
-    <hr>
-    <nav2>
-      <ul><strong>Languages</strong>: C, Java, Assembly, Python, Shell, SQL, Lua, Latex, Markdown, Matlab, HTML, CSS<br>
-        <strong>Tools</strong>: Linux, Command Line, Git, GitHub, GitLab, Svn, Vim, Raspberry Pi, Arduino, OOP,
-        Algorithms and Data Structure
-      </ul>
-    </nav2>
-
-    <h3>Projects</h3>
-    <hr>
-    <nav2>
       <ul>
-        <a href="https://github.com/frr0/Dotfiles"><strong>Dotfiles</strong></a>: A collection of my pc configuration
-        files<br>
-        <a href="https://github.com/frr0/nvim"><strong>Nvim</strong></a>: A configuration for nvim text editor<br>
-        <a href="https://github.com/frr0/Fantacitorio-bot"><strong>Telegram bot</strong></a>: A team manager for a game
-        inspired by
-        fantasy football<br>
-        <a href="https://github.com/frr0/Covid19"><strong>Covid-19</strong></a>: A full collection of Italian Covid-19
-        data put in a
-        7000+ pages pdf using pandoc<br>
-        <a href="https://github.com/frr0/cv_and_ws"><strong>Website</strong></a>: This cv template and my website
-        template<br>
+        <h3> Skills </h3><br>
+
+        <li> <strong>Languages</strong>: C, Java, Assembly, Python, Shell, SQL, Lua, Latex, Markdown, Matlab, HTML, CSS
+        </li>
+        <li> <strong>Tools</strong>: Linux, Command Line, Git, GitHub, GitLab, Svn, Vim, Raspberry Pi, Arduino, OOP,
+          Algorithms and Data Structure</li>
       </ul>
-    </nav2>
 
-  </main>
+
+      <ul>
+        <h3> Projects </h3><br>
+
+        <li> <a href="https://github.com/frr0/Dotfiles"><strong>Dotfiles</strong></a>: A collection of my pc
+          configuration
+          files</li>
+        <li> <a href="https://github.com/frr0/nvim"><strong>Nvim</strong></a>: A configuration for nvim text editor</li>
+        <li> <a href="https://github.com/frr0/Fantacitorio-bot"><strong>Telegram bot</strong></a>: A team manager for a
+          game
+          inspired by
+          fantasy football</li>
+        <li> <a href="https://github.com/frr0/Covid19"><strong>Covid-19</strong></a>: A full collection of Italian
+          Covid-19
+          data put in a
+          7000+ pages pdf using pandoc</li>
+        <li> <a href="https://github.com/frr0/cv_and_ws"><strong>Website</strong></a>: This cv template and my website
+          template</li>
+      </ul>
+
+      <br>
+      <p><a target="_blank" href="https://frr0.github.io/">Home</a></p>
+    </div>
 </body>
-
-<p class="bottom-4">
-</p>
 
 </html>
